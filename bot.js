@@ -5,9 +5,6 @@
  */
 
 const Files = require(require('path').join(__dirname, 'js', 'Main.js')).Files;
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const token = process.env.token;
 
 if(!process.send) {
 
@@ -18,7 +15,5 @@ Files.initStandalone();
 process.on('message', function(content) {
 	Files.initBotTest(content);
 });
-
-	client.login(process.env.BOT_TOKEN);
 	
 }
